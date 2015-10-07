@@ -1,0 +1,392 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		781523C91BB2E188000DC776 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 781523C81BB2E188000DC776 /* MapKit.framework */; };
+		78C06C571BB97EB50091E02A /* FWTAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C06C491BB97EB50091E02A /* FWTAppDelegate.swift */; settings = {ASSET_TAGS = (); }; };
+		78C06C581BB97EB50091E02A /* FWTCoreManagerRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C06C4A1BB97EB50091E02A /* FWTCoreManagerRequester.swift */; settings = {ASSET_TAGS = (); }; };
+		78C06C591BB97EB50091E02A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78C06C4D1BB97EB50091E02A /* Assets.xcassets */; settings = {ASSET_TAGS = (); }; };
+		78C06C5A1BB97EB50091E02A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78C06C4E1BB97EB50091E02A /* LaunchScreen.storyboard */; settings = {ASSET_TAGS = (); }; };
+		78C06C5B1BB97EB50091E02A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78C06C501BB97EB50091E02A /* Main.storyboard */; settings = {ASSET_TAGS = (); }; };
+		78C06C5D1BB97EB50091E02A /* FWTMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C06C541BB97EB50091E02A /* FWTMapViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		78C06C5E1BB97EB50091E02A /* FWTTaskAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C06C551BB97EB50091E02A /* FWTTaskAnnotation.swift */; settings = {ASSET_TAGS = (); }; };
+		78C06C5F1BB97EB50091E02A /* FWTTaskDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C06C561BB97EB50091E02A /* FWTTaskDetailViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		78C06C891BB9A6ED0091E02A /* FWTNearbyCoreManagerRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C06C881BB9A6ED0091E02A /* FWTNearbyCoreManagerRequester.swift */; settings = {ASSET_TAGS = (); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		7815239D1BB2D7AF000DC776 /* IBM-CaseManagerNearbySample-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "IBM-CaseManagerNearbySample-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		781523C81BB2E188000DC776 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		78C06C491BB97EB50091E02A /* FWTAppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = FWTAppDelegate.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		78C06C4A1BB97EB50091E02A /* FWTCoreManagerRequester.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = FWTCoreManagerRequester.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		78C06C4B1BB97EB50091E02A /* IBM-CaseManagerNearbySample-iOS-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "IBM-CaseManagerNearbySample-iOS-Bridging-Header.h"; sourceTree = "<group>"; };
+		78C06C4D1BB97EB50091E02A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		78C06C4F1BB97EB50091E02A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		78C06C511BB97EB50091E02A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		78C06C521BB97EB50091E02A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		78C06C541BB97EB50091E02A /* FWTMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = FWTMapViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		78C06C551BB97EB50091E02A /* FWTTaskAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = FWTTaskAnnotation.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		78C06C561BB97EB50091E02A /* FWTTaskDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = FWTTaskDetailViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		78C06C881BB9A6ED0091E02A /* FWTNearbyCoreManagerRequester.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = FWTNearbyCoreManagerRequester.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7815239A1BB2D7AF000DC776 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				781523C91BB2E188000DC776 /* MapKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		781523941BB2D7AF000DC776 = {
+			isa = PBXGroup;
+			children = (
+				78C06C481BB97EB50091E02A /* IBM-CaseManagerNearbySample-iOS */,
+				7815239E1BB2D7AF000DC776 /* Products */,
+				781523C81BB2E188000DC776 /* MapKit.framework */,
+			);
+			sourceTree = "<group>";
+		};
+		7815239E1BB2D7AF000DC776 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7815239D1BB2D7AF000DC776 /* IBM-CaseManagerNearbySample-iOS.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		78C06C481BB97EB50091E02A /* IBM-CaseManagerNearbySample-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				78C06C601BB9811C0091E02A /* Service */,
+				78C06C4C1BB97EB50091E02A /* Supporting Files */,
+				78C06C531BB97EB50091E02A /* UI */,
+				78C06C491BB97EB50091E02A /* FWTAppDelegate.swift */,
+				78C06C4B1BB97EB50091E02A /* IBM-CaseManagerNearbySample-iOS-Bridging-Header.h */,
+			);
+			path = "IBM-CaseManagerNearbySample-iOS";
+			sourceTree = "<group>";
+		};
+		78C06C4C1BB97EB50091E02A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				78C06C4D1BB97EB50091E02A /* Assets.xcassets */,
+				78C06C521BB97EB50091E02A /* Info.plist */,
+				78C06C4E1BB97EB50091E02A /* LaunchScreen.storyboard */,
+				78C06C501BB97EB50091E02A /* Main.storyboard */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		78C06C531BB97EB50091E02A /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				78C06C541BB97EB50091E02A /* FWTMapViewController.swift */,
+				78C06C551BB97EB50091E02A /* FWTTaskAnnotation.swift */,
+				78C06C561BB97EB50091E02A /* FWTTaskDetailViewController.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		78C06C601BB9811C0091E02A /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				78C06C4A1BB97EB50091E02A /* FWTCoreManagerRequester.swift */,
+				78C06C881BB9A6ED0091E02A /* FWTNearbyCoreManagerRequester.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7815239C1BB2D7AF000DC776 /* IBM-CaseManagerNearbySample-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 781523AF1BB2D7AF000DC776 /* Build configuration list for PBXNativeTarget "IBM-CaseManagerNearbySample-iOS" */;
+			buildPhases = (
+				781523991BB2D7AF000DC776 /* Sources */,
+				7815239A1BB2D7AF000DC776 /* Frameworks */,
+				7815239B1BB2D7AF000DC776 /* Resources */,
+				781523C51BB2E00C000DC776 /* Copy bundled frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "IBM-CaseManagerNearbySample-iOS";
+			productName = NearbyTasks;
+			productReference = 7815239D1BB2D7AF000DC776 /* IBM-CaseManagerNearbySample-iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		781523951BB2D7AF000DC776 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = FWT;
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "Future Workshops";
+				TargetAttributes = {
+					7815239C1BB2D7AF000DC776 = {
+						CreatedOnToolsVersion = 7.0;
+					};
+				};
+			};
+			buildConfigurationList = 781523981BB2D7AF000DC776 /* Build configuration list for PBXProject "IBM-CaseManagerNearbySample-iOS" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 781523941BB2D7AF000DC776;
+			productRefGroup = 7815239E1BB2D7AF000DC776 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7815239C1BB2D7AF000DC776 /* IBM-CaseManagerNearbySample-iOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7815239B1BB2D7AF000DC776 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78C06C5B1BB97EB50091E02A /* Main.storyboard in Resources */,
+				78C06C591BB97EB50091E02A /* Assets.xcassets in Resources */,
+				78C06C5A1BB97EB50091E02A /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		781523C51BB2E00C000DC776 /* Copy bundled frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy bundled frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -ex\n\nsource=\"${PROJECT_DIR}/Frameworks/${PLATFORM_NAME}\"\ndest=\"${CONFIGURATION_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}\"\n\nmkdir -p \"${CONFIGURATION_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}\"\n\nrsync -av --filter \"- CVS/\" --filter \"- .svn/\" --filter \"- .git/\" --filter \"- .hg/\" --filter \"- Headers/\" --filter \"- PrivateHeaders/\" --filter \"- Modules/\" \"${source}/IBMCaseManagerSDK.framework\" \"${dest}\"\n\nif [ \"${CODE_SIGNING_REQUIRED}\" == \"YES\" ]; then\n\n/usr/bin/codesign --force --sign ${EXPANDED_CODE_SIGN_IDENTITY} --preserve-metadata=identifier,entitlements \"${dest}/IBMCaseManagerSDK.framework\"\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		781523991BB2D7AF000DC776 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78C06C5D1BB97EB50091E02A /* FWTMapViewController.swift in Sources */,
+				78C06C5E1BB97EB50091E02A /* FWTTaskAnnotation.swift in Sources */,
+				78C06C5F1BB97EB50091E02A /* FWTTaskDetailViewController.swift in Sources */,
+				78C06C571BB97EB50091E02A /* FWTAppDelegate.swift in Sources */,
+				78C06C891BB9A6ED0091E02A /* FWTNearbyCoreManagerRequester.swift in Sources */,
+				78C06C581BB97EB50091E02A /* FWTCoreManagerRequester.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		78C06C4E1BB97EB50091E02A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				78C06C4F1BB97EB50091E02A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			path = .;
+			sourceTree = "<group>";
+		};
+		78C06C501BB97EB50091E02A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				78C06C511BB97EB50091E02A /* Base */,
+			);
+			name = Main.storyboard;
+			path = .;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		781523AD1BB2D7AF000DC776 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		781523AE1BB2D7AF000DC776 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		781523B01BB2D7AF000DC776 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks/$(PLATFORM_NAME)",
+				);
+				INFOPLIST_FILE = "IBM-CaseManagerNearbySample-iOS/Supporting Files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"-framework",
+					IBMCaseManagerSDK,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.futureworkshops.CaseManagerNearbySample;
+				PRODUCT_NAME = "IBM-CaseManagerNearbySample-iOS";
+				SWIFT_OBJC_BRIDGING_HEADER = "IBM-CaseManagerNearbySample-iOS/IBM-CaseManagerNearbySample-iOS-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		781523B11BB2D7AF000DC776 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks/$(PLATFORM_NAME)",
+				);
+				INFOPLIST_FILE = "IBM-CaseManagerNearbySample-iOS/Supporting Files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = (
+					"-framework",
+					IBMCaseManagerSDK,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.futureworkshops.CaseManagerNearbySample;
+				PRODUCT_NAME = "IBM-CaseManagerNearbySample-iOS";
+				SWIFT_OBJC_BRIDGING_HEADER = "IBM-CaseManagerNearbySample-iOS/IBM-CaseManagerNearbySample-iOS-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		781523981BB2D7AF000DC776 /* Build configuration list for PBXProject "IBM-CaseManagerNearbySample-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				781523AD1BB2D7AF000DC776 /* Debug */,
+				781523AE1BB2D7AF000DC776 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		781523AF1BB2D7AF000DC776 /* Build configuration list for PBXNativeTarget "IBM-CaseManagerNearbySample-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				781523B01BB2D7AF000DC776 /* Debug */,
+				781523B11BB2D7AF000DC776 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 781523951BB2D7AF000DC776 /* Project object */;
+}

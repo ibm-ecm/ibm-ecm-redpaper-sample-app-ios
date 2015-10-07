@@ -1,0 +1,14 @@
+//
+//  IBMCaseManagerSDK.modulemap
+//  IBMCaseManagerSDK
+//
+//  Created by Fabio Gallonetto on 26/09/2015.
+//  Copyright © 2015 Future Workshops Ltd. All rights reserved.
+//
+
+framework module IBMCaseManagerSDK {
+    umbrella header "ICMCaseManager.h"
+    
+    export *
+    module * { export * }
+}
