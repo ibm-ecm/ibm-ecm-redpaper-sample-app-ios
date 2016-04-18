@@ -63,7 +63,7 @@ struct FWTNearbyCoreManagerRequester : FWTCoreManagerRequester {
                 
                 
                 userRole.getNearbyTasksAtCoordinate(coordinate, radius: radius, withCompletion: { success, tasks, error in
-                    if let tasks = tasks as? [ICMTask] {
+                    if let tasks = tasks {
                         callback(success: success, roleManager: userRole, tasks: tasks)
                     } else {
                         callback(success: false, roleManager: userRole, tasks: [])

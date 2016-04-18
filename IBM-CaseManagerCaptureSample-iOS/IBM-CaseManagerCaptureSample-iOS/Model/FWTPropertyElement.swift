@@ -6,14 +6,19 @@
 //
 
 import Foundation
+import IBMCaseManagerSDK
 
 struct FWTPropertyElement {
-    let property:ICMProperty
-    var value:NSObject?
+    let property: ICMProperty
+    var value: AnyObject
     
     init(property:ICMProperty) {
         self.property = property
-        self.value = self.property.value
+        if let value = self.property.value {
+            self.value = value
+        } else {
+            self.value = NSNull()
+        }
     }
 }
 
@@ -26,7 +31,7 @@ extension Dictionary {
 }
 
 extension FWTPropertyElement {
-    func dictionary() -> [String:NSObject!] {
+    func dictionary() -> [String:AnyObject!] {
         return [property.identifier : value]
     }
 }
@@ -42,11 +47,11 @@ extension SequenceType where Generator.Element == FWTPropertyElement {
         var propertiesDictionary:[String:AnyObject] = [:]
         do {
             try forEach {
-                if $0.value == nil && $0.property.required {
+                if $0.property.required {
                     throw ElementError.EmptyRequiredProperty(property: $0.property)
                 }
                 
-                if $0.value != nil && !$0.property.readOnly {
+                if !$0.property.readOnly {
                     propertiesDictionary.merge($0.dictionary())
                 }
             }

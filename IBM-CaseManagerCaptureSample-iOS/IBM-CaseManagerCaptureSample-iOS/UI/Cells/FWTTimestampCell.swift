@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import IBMCaseManagerSDK
 
 class FWTTimestampCell : FWTPropertyCell
 {

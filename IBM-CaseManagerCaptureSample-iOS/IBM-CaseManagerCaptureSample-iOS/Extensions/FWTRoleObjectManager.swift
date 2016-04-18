@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import IBMCaseManagerSDK
 
 extension ICMRoleObjectManager {
     /**
@@ -14,11 +15,7 @@ extension ICMRoleObjectManager {
     - returns: `[ICMTask]` with all the tasks for that role
     */
     func getAllTasks() -> [ICMTask] {
-        guard let inbaskets = self.role.inbaskets as? [ICMInbasket] else {
-            return []
-        }
-       
-        let tasks:[ICMTask] = inbaskets.map { $0.tasks as? [ICMTask] }.filter { $0 != nil }.flatMap { $0! }
+        let tasks:[ICMTask] = self.role.inbaskets.map { $0.tasks }.filter { $0 != nil }.flatMap { $0! }
         return tasks
     }
 }

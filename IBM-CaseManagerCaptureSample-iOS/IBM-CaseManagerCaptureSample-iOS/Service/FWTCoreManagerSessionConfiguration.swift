@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import IBMCaseManagerSDK
 
 protocol FWTCoreManagerSession {
     func createSession(host host:String, user:String, password:String) -> ICMSessionManager
@@ -16,7 +17,7 @@ extension FWTCoreManagerSession {
     {
         let baseURL = NSURL(string: host)
         let credential = NSURLCredential(user: user, password: password, persistence: .None)
-        let manager = ICMSessionManager(baseURL: baseURL!, credential: credential, persistenceType: .Memory)
+        let manager = ICMSessionManager(baseURL: baseURL!, credential: credential, desktopName: nil, persistenceType: .Memory)
         return manager
     }
 }

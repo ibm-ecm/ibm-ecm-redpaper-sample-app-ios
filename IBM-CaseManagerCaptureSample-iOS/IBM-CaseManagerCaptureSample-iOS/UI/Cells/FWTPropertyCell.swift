@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import IBMCaseManagerSDK
 
 typealias FWTPropertyCellValueChange = (cell:UITableViewCell, value:NSObject!) -> Void
 

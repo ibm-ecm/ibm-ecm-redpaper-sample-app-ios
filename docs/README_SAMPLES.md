@@ -29,10 +29,9 @@ Here are the prerequisites for using the SDK:
 
 #Package
 The package contains :
-- ECM\_Redpaper\_SampleCode\_iOS: This sample code folder contains the following:
-  - IBM-RedPaperSamples-iOS.xcworkspace :the workspace file that can be directly opened from Xcode
-  - IBM-CaseManagerCaptureSample-iOS : a folder containing the source code for the Case Manager Capture Sample app
-  - IBM-CaseManagerNearbySample-iOS : a folder containing the source code for the Case Manager Nearby Sample app
+- IBM-RedPaperSamples-iOS.xcworkspace :the workspace file that can be directly opened from Xcode
+- IBM-CaseManagerCaptureSample-iOS : a folder containing the source code for the Case Manager Capture Sample app
+- IBM-CaseManagerNearbySample-iOS : a folder containing the source code for the Case Manager Nearby Sample app
 
 
 #Installation

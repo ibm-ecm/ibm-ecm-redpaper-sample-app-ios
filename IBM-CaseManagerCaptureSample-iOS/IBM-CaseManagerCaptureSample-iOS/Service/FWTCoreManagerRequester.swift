@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import IBMCaseManagerSDK
 
 typealias SolutionManagerCompletion = (Bool, [ICMSolutionObjectManager]) -> Void
 typealias RoleManagerCompletion = (Bool, [ICMRoleObjectManager]) -> Void
@@ -35,7 +36,7 @@ extension FWTCoreManagerRequester {
     */
     func getSolutionManagers(sessionManager:ICMSessionManager, completion:SolutionManagerCompletion) {
         sessionManager.getSolutionsWithCompletion({ [weak sessionManager] (success, error) in
-            if  success, let sessionManager = sessionManager, let solutions = sessionManager.solutions as? [ICMSolution] {
+            if  success, let sessionManager = sessionManager, let solutions = sessionManager.solutions {
                 let managers = solutions.map{ sessionManager.solutionObjectManagerForSolution($0) }
                 completion(true, managers)
             } else {
@@ -52,7 +53,8 @@ extension FWTCoreManagerRequester {
     */
     func getRoleManagers(solutionManager:ICMSolutionObjectManager, completion:RoleManagerCompletion) {
         solutionManager.getSolutionDetailsWithCompletion { (success, error) in
-            if success, let roles = solutionManager.solution.roles as? [ICMRole] {
+            if success {
+                let roles = solutionManager.solution.roles
                 let managers = roles.map { solutionManager.roleObjectManagerForRole($0) }
                 completion(true, managers)
             } else {
@@ -67,7 +69,8 @@ extension FWTCoreManagerRequester {
     - parameter profile: The configuration of the current session
     - parameter completion: The block that will be called once that the operations is finished
     */
-    func getTasksForProfile(var profile:FWTCoreManagerSessionConfiguration, completion:TasksCompletion) {
+    func getTasksForProfile(profile:FWTCoreManagerSessionConfiguration, completion:TasksCompletion) {
+        var profile = profile
         getSolutionManagers(profile.coreManagerSession) { (success, solutions) -> Void in
             guard success, let solution = solutions.filter({ $0.solution.prefix == profile.solutionPrefix }).first else {
                 completion(false, nil, [])
@@ -80,12 +83,10 @@ extension FWTCoreManagerRequester {
                     return
                 }
                 
-                let inbasket = role.inbasketObjectManagerForInbasket(role.role.inbaskets[0] as! ICMInbasket)
+                let inbasket = role.inbasketObjectManagerForInbasket(role.role.inbaskets[0])
                 inbasket.getInbasketDetailsWithCompletion({ (success, error) -> Void in
-                    let inbasketTaks = inbasket.inbasket.tasks as! [ICMTask]
-                    
+                    let inbasketTaks = inbasket.inbasket.tasks
                     let tasks = inbasketTaks.filterByRegex(profile.taskRagexPattern)
-                    
                     completion(true, role, tasks)
                 })
             })
@@ -100,7 +101,7 @@ extension FWTCoreManagerRequester {
     - parameter completion: The block that will be called once that the operation is finished.
     */
     func getTaskDetails(roleManager:ICMRoleObjectManager, task:ICMTask, completion:TaskDetailCompletion) {
-        guard let inbasket = task.inbaskets.first as? ICMInbasket else {
+        guard let inbasket = task.inbaskets.first else {
             completion(false, nil)
             return
         }

@@ -11,7 +11,8 @@ struct FWTDatacapRequester {
     let serviceClient:ICPServiceClient
     let capture:ICPCapture
     
-    init(var sessionConfiguration:FWTDatacapSessionConfiguration) {
+    init(sessionConfiguration:FWTDatacapSessionConfiguration) {
+        var sessionConfiguration = sessionConfiguration
         self.service = sessionConfiguration.service
         self.serviceClient = sessionConfiguration.serviceClient
         self.helper = sessionConfiguration.datacapHelper

@@ -8,15 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		781523C91BB2E188000DC776 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 781523C81BB2E188000DC776 /* MapKit.framework */; };
-		78C06C571BB97EB50091E02A /* FWTAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C06C491BB97EB50091E02A /* FWTAppDelegate.swift */; settings = {ASSET_TAGS = (); }; };
-		78C06C581BB97EB50091E02A /* FWTCoreManagerRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C06C4A1BB97EB50091E02A /* FWTCoreManagerRequester.swift */; settings = {ASSET_TAGS = (); }; };
-		78C06C591BB97EB50091E02A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78C06C4D1BB97EB50091E02A /* Assets.xcassets */; settings = {ASSET_TAGS = (); }; };
-		78C06C5A1BB97EB50091E02A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78C06C4E1BB97EB50091E02A /* LaunchScreen.storyboard */; settings = {ASSET_TAGS = (); }; };
-		78C06C5B1BB97EB50091E02A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78C06C501BB97EB50091E02A /* Main.storyboard */; settings = {ASSET_TAGS = (); }; };
-		78C06C5D1BB97EB50091E02A /* FWTMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C06C541BB97EB50091E02A /* FWTMapViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		78C06C5E1BB97EB50091E02A /* FWTTaskAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C06C551BB97EB50091E02A /* FWTTaskAnnotation.swift */; settings = {ASSET_TAGS = (); }; };
-		78C06C5F1BB97EB50091E02A /* FWTTaskDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C06C561BB97EB50091E02A /* FWTTaskDetailViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		78C06C891BB9A6ED0091E02A /* FWTNearbyCoreManagerRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C06C881BB9A6ED0091E02A /* FWTNearbyCoreManagerRequester.swift */; settings = {ASSET_TAGS = (); }; };
+		78C06C571BB97EB50091E02A /* FWTAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C06C491BB97EB50091E02A /* FWTAppDelegate.swift */; };
+		78C06C581BB97EB50091E02A /* FWTCoreManagerRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C06C4A1BB97EB50091E02A /* FWTCoreManagerRequester.swift */; };
+		78C06C591BB97EB50091E02A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78C06C4D1BB97EB50091E02A /* Assets.xcassets */; };
+		78C06C5A1BB97EB50091E02A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78C06C4E1BB97EB50091E02A /* LaunchScreen.storyboard */; };
+		78C06C5B1BB97EB50091E02A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78C06C501BB97EB50091E02A /* Main.storyboard */; };
+		78C06C5D1BB97EB50091E02A /* FWTMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C06C541BB97EB50091E02A /* FWTMapViewController.swift */; };
+		78C06C5E1BB97EB50091E02A /* FWTTaskAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C06C551BB97EB50091E02A /* FWTTaskAnnotation.swift */; };
+		78C06C5F1BB97EB50091E02A /* FWTTaskDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C06C561BB97EB50091E02A /* FWTTaskDetailViewController.swift */; };
+		78C06C891BB9A6ED0091E02A /* FWTNearbyCoreManagerRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C06C881BB9A6ED0091E02A /* FWTNearbyCoreManagerRequester.swift */; };
+		EBBAB0DC1CBBF0CD00861DA7 /* IBMCaseManagerSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBBAB0DB1CBBF0CD00861DA7 /* IBMCaseManagerSDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,7 +25,6 @@
 		781523C81BB2E188000DC776 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		78C06C491BB97EB50091E02A /* FWTAppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = FWTAppDelegate.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		78C06C4A1BB97EB50091E02A /* FWTCoreManagerRequester.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = FWTCoreManagerRequester.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
-		78C06C4B1BB97EB50091E02A /* IBM-CaseManagerNearbySample-iOS-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "IBM-CaseManagerNearbySample-iOS-Bridging-Header.h"; sourceTree = "<group>"; };
 		78C06C4D1BB97EB50091E02A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		78C06C4F1BB97EB50091E02A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		78C06C511BB97EB50091E02A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -33,6 +33,8 @@
 		78C06C551BB97EB50091E02A /* FWTTaskAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = FWTTaskAnnotation.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		78C06C561BB97EB50091E02A /* FWTTaskDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = FWTTaskDetailViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		78C06C881BB9A6ED0091E02A /* FWTNearbyCoreManagerRequester.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = FWTNearbyCoreManagerRequester.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		EBBAB0DB1CBBF0CD00861DA7 /* IBMCaseManagerSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IBMCaseManagerSDK.framework; path = Frameworks/universal/IBMCaseManagerSDK.framework; sourceTree = "<group>"; };
+		EBBAB0DD1CBBF12400861DA7 /* IBM-CaseManagerNearbySample-iOS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "IBM-CaseManagerNearbySample-iOS-Bridging-Header.h"; path = "IBM-CaseManagerNearbySample-iOS/IBM-CaseManagerNearbySample-iOS-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBBAB0DC1CBBF0CD00861DA7 /* IBMCaseManagerSDK.framework in Frameworks */,
 				781523C91BB2E188000DC776 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -52,6 +55,7 @@
 			children = (
 				78C06C481BB97EB50091E02A /* IBM-CaseManagerNearbySample-iOS */,
 				7815239E1BB2D7AF000DC776 /* Products */,
+				EBBAB0DB1CBBF0CD00861DA7 /* IBMCaseManagerSDK.framework */,
 				781523C81BB2E188000DC776 /* MapKit.framework */,
 			);
 			sourceTree = "<group>";
@@ -71,7 +75,6 @@
 				78C06C4C1BB97EB50091E02A /* Supporting Files */,
 				78C06C531BB97EB50091E02A /* UI */,
 				78C06C491BB97EB50091E02A /* FWTAppDelegate.swift */,
-				78C06C4B1BB97EB50091E02A /* IBM-CaseManagerNearbySample-iOS-Bridging-Header.h */,
 			);
 			path = "IBM-CaseManagerNearbySample-iOS";
 			sourceTree = "<group>";
@@ -79,6 +82,7 @@
 		78C06C4C1BB97EB50091E02A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				EBBAB0DD1CBBF12400861DA7 /* IBM-CaseManagerNearbySample-iOS-Bridging-Header.h */,
 				78C06C4D1BB97EB50091E02A /* Assets.xcassets */,
 				78C06C521BB97EB50091E02A /* Info.plist */,
 				78C06C4E1BB97EB50091E02A /* LaunchScreen.storyboard */,
@@ -187,7 +191,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "set -ex\n\nsource=\"${PROJECT_DIR}/Frameworks/${PLATFORM_NAME}\"\ndest=\"${CONFIGURATION_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}\"\n\nmkdir -p \"${CONFIGURATION_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}\"\n\nrsync -av --filter \"- CVS/\" --filter \"- .svn/\" --filter \"- .git/\" --filter \"- .hg/\" --filter \"- Headers/\" --filter \"- PrivateHeaders/\" --filter \"- Modules/\" \"${source}/IBMCaseManagerSDK.framework\" \"${dest}\"\n\nif [ \"${CODE_SIGNING_REQUIRED}\" == \"YES\" ]; then\n\n/usr/bin/codesign --force --sign ${EXPANDED_CODE_SIGN_IDENTITY} --preserve-metadata=identifier,entitlements \"${dest}/IBMCaseManagerSDK.framework\"\nfi";
+			shellScript = "set -ex\n\ninstall_framework()\n{\n    FRAMEWORK_NAME=$1\n    \n    FRAMEWORK_SOURCE=\"${PROJECT_DIR}/Frameworks/${PLATFORM_NAME}/${FRAMEWORK_NAME}\"\n    FRAMEWORK_DESTINATION_PATH=\"${CONFIGURATION_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}\"\n    \n    if [ ! -d \"${FRAMEWORK_SOURCE}\" ]; then\n    FRAMEWORK_SOURCE=\"${PROJECT_DIR}/Frameworks/universal/${FRAMEWORK_NAME}\"\n    fi\n    \n    mkdir -p \"${CONFIGURATION_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}\"\n    \n    rsync -av --filter \"- CVS/\" --filter \"- .svn/\" --filter \"- .git/\" --filter \"- .hg/\" --filter \"- Headers/\" --filter \"- PrivateHeaders/\" --filter \"- Modules/\" \"${FRAMEWORK_SOURCE}\" \"${FRAMEWORK_DESTINATION_PATH}\"\n    \n    if [ \"$CODE_SIGNING_REQUIRED\" == \"YES\" ]; then\n    /usr/bin/codesign --force --sign ${EXPANDED_CODE_SIGN_IDENTITY} --preserve-metadata=identifier,entitlements \"${FRAMEWORK_DESTINATION_PATH}/${FRAMEWORK_NAME}\"\n    fi\n}\n\ninstall_framework \"IBMCaseManagerSDK.framework\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -323,14 +327,13 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks/$(PLATFORM_NAME)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Frameworks/universal",
 				);
 				INFOPLIST_FILE = "IBM-CaseManagerNearbySample-iOS/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = YES;
-				OTHER_LDFLAGS = (
-					"-framework",
-					IBMCaseManagerSDK,
-				);
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.futureworkshops.CaseManagerNearbySample;
 				PRODUCT_NAME = "IBM-CaseManagerNearbySample-iOS";
 				SWIFT_OBJC_BRIDGING_HEADER = "IBM-CaseManagerNearbySample-iOS/IBM-CaseManagerNearbySample-iOS-Bridging-Header.h";
@@ -350,14 +353,13 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks/$(PLATFORM_NAME)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Frameworks/universal",
 				);
 				INFOPLIST_FILE = "IBM-CaseManagerNearbySample-iOS/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = NO;
-				OTHER_LDFLAGS = (
-					"-framework",
-					IBMCaseManagerSDK,
-				);
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.futureworkshops.CaseManagerNearbySample;
 				PRODUCT_NAME = "IBM-CaseManagerNearbySample-iOS";
 				SWIFT_OBJC_BRIDGING_HEADER = "IBM-CaseManagerNearbySample-iOS/IBM-CaseManagerNearbySample-iOS-Bridging-Header.h";

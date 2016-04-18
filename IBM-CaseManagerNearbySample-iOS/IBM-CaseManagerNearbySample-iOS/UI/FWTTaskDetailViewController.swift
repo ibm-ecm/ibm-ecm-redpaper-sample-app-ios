@@ -8,12 +8,13 @@
 import UIKit
 
 extension SequenceType where Generator.Element == ICMProperty {
-    func dictionary() -> [String:AnyObject!]
-    {
-        let enabledProperties = filter({ !$0.readOnly && ($0.value != nil) })
-        var dict:[String:AnyObject!] = [:]
-        enabledProperties.forEach({ dict[$0.identifier] = $0.value })
-        return dict
+    var propertyDictionary: [String:AnyObject!] {
+        get {
+            let enabledProperties = filter({ !$0.readOnly && ($0.value != nil) })
+            var dict:[String:AnyObject!] = [:]
+            enabledProperties.forEach({ dict[$0.identifier] = $0.value })
+            return dict
+        }
     }
 }
 
@@ -71,7 +72,7 @@ class FWTTaskDetailViewController: UIViewController {
             nameLabel?.text = task.stepName
             subjectLabel?.text = task.subject
             
-            if let lockedUser = task.lockedUser where !lockedUser.isEmpty {
+            if !task.lockedUser.isEmpty {
                 lockButton?.setTitle("Unlock Task", forState: .Normal)
             } else {
                 lockButton?.setTitle("Lock Task", forState: .Normal)
@@ -85,7 +86,7 @@ class FWTTaskDetailViewController: UIViewController {
     @IBAction func changeLockState(sender: UIButton)
     {
         if let task = task, let taskManager = taskManager {
-            if let lockedUser = task.lockedUser where !lockedUser.isEmpty {
+            if !task.lockedUser.isEmpty {
                 taskManager.unlockTaskWithCompletion({ [weak self] (success, error) -> Void in
                     self?.showMessage(title: "Unlock Task", message: ( success ? "Task unlocked" : (error?.localizedDescription ?? "Error") ))
                     if success {
@@ -107,11 +108,11 @@ class FWTTaskDetailViewController: UIViewController {
     {
         if let taskManager = taskManager {
             
-            let response = (taskManager.task.responses.first as? String) ?? "Complete"
-            let properties = (taskManager.task.properties as? [ICMProperty]) ?? []
-            let dict = properties.dictionary()
+            let response = taskManager.task.responses.first ?? "Complete"
+            let properties = taskManager.task.properties
+            let dictionary = properties.propertyDictionary
             
-            taskManager.completeTaskWithResponse(response, properties: dict, completion: { [weak self] (success, error) -> Void in
+            taskManager.completeTaskWithResponse(response, properties: dictionary, completion: { [weak self] (success, error) -> Void in
                 self?.showMessage(title: "Complete Task", message: ( success ? "Task completed" : (error?.localizedDescription ?? "Error") ))
             })
         }

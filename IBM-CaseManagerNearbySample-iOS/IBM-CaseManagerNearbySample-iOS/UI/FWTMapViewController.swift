@@ -10,7 +10,7 @@ import MapKit
 
 // MARK: Server configuration
 
-let SimpleSampleBaseURLString = "http://ecmtest1.ibm.office.fwn:9080/navigator"
+let SimpleSampleBaseURLString = "http://ecmdev1.ibm.office.fwn:9080/navigator"
 let SimpleSampleUsername = "p8admin"
 let SimpleSamplePassword = "filenet"
 
@@ -43,7 +43,7 @@ extension FWTCoreManagerSession {
     {
         let baseURL = NSURL(string: host)
         let credential = NSURLCredential(user: user, password: password, persistence: .None)
-        let manager = ICMSessionManager(baseURL: baseURL!, credential: credential, persistenceType: .Memory)
+        let manager = ICMSessionManager(baseURL: baseURL!, credential: credential, desktopName: nil, persistenceType: .Memory)
         return manager
     }
 }

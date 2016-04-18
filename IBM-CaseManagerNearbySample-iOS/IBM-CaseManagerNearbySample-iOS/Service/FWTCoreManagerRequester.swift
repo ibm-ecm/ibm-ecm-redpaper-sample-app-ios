@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import IBMCaseManagerSDK
 
 typealias SolutionManagerCompletion = (Bool, [ICMSolutionObjectManager]) -> Void
 typealias RoleManagerCompletion = (Bool, [ICMRoleObjectManager]) -> Void
@@ -32,7 +33,7 @@ extension FWTCoreManagerRequester {
     */
     func getSolutionManagers(sessionManager:ICMSessionManager, completion:SolutionManagerCompletion) {
         sessionManager.getSolutionsWithCompletion({ [weak sessionManager] (success, error) in
-            if  success, let sessionManager = sessionManager, let solutions = sessionManager.solutions as? [ICMSolution] {
+            if  success, let sessionManager = sessionManager, let solutions = sessionManager.solutions {
                 let managers = solutions.map{ sessionManager.solutionObjectManagerForSolution($0) }
                 completion(true, managers)
             } else {
@@ -49,7 +50,8 @@ extension FWTCoreManagerRequester {
     */
     func getRoleManagers(solutionManager:ICMSolutionObjectManager, completion:RoleManagerCompletion) {
         solutionManager.getSolutionDetailsWithCompletion { (success, error) in
-            if success, let roles = solutionManager.solution.roles as? [ICMRole] {
+            if success {
+                let roles = solutionManager.solution.roles
                 let managers = roles.map { solutionManager.roleObjectManagerForRole($0) }
                 completion(true, managers)
             } else {
@@ -66,7 +68,7 @@ extension FWTCoreManagerRequester {
     - parameter completion: The block that will be called once that the operation is finished.
     */
     func getTaskDetails(roleManager:ICMRoleObjectManager, task:ICMTask, completion:TaskDetailCompletion) {
-        guard let inbasket = task.inbaskets.first as? ICMInbasket else {
+        guard let inbasket = task.inbaskets.first else {
             completion(false, nil)
             return
         }

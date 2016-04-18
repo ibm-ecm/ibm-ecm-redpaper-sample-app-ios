@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import IBMCaseManagerSDK
 
 class FWTCaseDetailsViewController: UITableViewController {
 
@@ -53,7 +54,7 @@ class FWTCaseDetailsViewController: UITableViewController {
         
         do {
             let properties = try elements.dictionary()
-            guard let response = taskManager?.task.responses.first as? String else { return }
+            guard let response = taskManager?.task.responses.first else { return }
             
             taskManager?.completeTaskWithResponse(response, properties: properties, completion: { [weak self] (success, error) -> Void in
                 self?.performSegueWithIdentifier("ShowDocuments", sender: self)
@@ -81,7 +82,7 @@ class FWTCaseDetailsViewController: UITableViewController {
     func updateData(completion:(()->Void)?) {
         coreManagerRequester.getLayout(self.sessionManager) { (taskManager) -> Void in
             self.taskManager = taskManager
-            if let layout = self.taskManager?.task.layout as? [ICMTaskPropertiesLayout] {
+            if let layout = self.taskManager?.task.layout {
                 self.layout = layout.map { $0.section() }
             }
             completion?()

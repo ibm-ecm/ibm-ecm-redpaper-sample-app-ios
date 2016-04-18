@@ -66,6 +66,7 @@
 		78C06C861BB999E00091E02A /* FWTCaseDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = FWTCaseDetailsViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		78D199601BBA950F008D9857 /* FWTRegex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = FWTRegex.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		78EA3D321BC3FABC00046678 /* FWTDocumentListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = FWTDocumentListViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		EBBD998D1CC2312A00866702 /* IBMCaseManagerSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IBMCaseManagerSDK.framework; path = Frameworks/universal/IBMCaseManagerSDK.framework; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -157,6 +158,7 @@
 				78948D161BBAA2C100C8212D /* Service */,
 				78C06C841BB999250091E02A /* Supporting Files */,
 				78C06C851BB999350091E02A /* UI */,
+				EBBD998C1CC2311300866702 /* Frameworks */,
 				78C06C721BB990920091E02A /* FWTAppDelegate.swift */,
 			);
 			path = "IBM-CaseManagerCaptureSample-iOS";
@@ -184,6 +186,14 @@
 				78866DE01BC7BBEF00D636DE /* FWTCameraPreviewViewController.swift */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		EBBD998C1CC2311300866702 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EBBD998D1CC2312A00866702 /* IBMCaseManagerSDK.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,7 +276,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "set -ex\n\nsource=\"${PROJECT_DIR}/Frameworks/${PLATFORM_NAME}\"\ndest=\"${CONFIGURATION_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}\"\n\nmkdir -p \"${CONFIGURATION_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}\"\n\nrsync -av --filter \"- CVS/\" --filter \"- .svn/\" --filter \"- .git/\" --filter \"- .hg/\" --filter \"- Headers/\" --filter \"- PrivateHeaders/\" --filter \"- Modules/\" \"${source}/IBMCaseManagerSDK.framework\" \"${dest}\"\nrsync -av --filter \"- CVS/\" --filter \"- .svn/\" --filter \"- .git/\" --filter \"- .hg/\" --filter \"- Headers/\" --filter \"- PrivateHeaders/\" --filter \"- Modules/\" \"${source}/IBMCaptureSDK.framework\" \"${dest}\"\nrsync -av --filter \"- CVS/\" --filter \"- .svn/\" --filter \"- .git/\" --filter \"- .hg/\" --filter \"- Headers/\" --filter \"- PrivateHeaders/\" --filter \"- Modules/\" \"${source}/IBMCaptureUISDK.framework\" \"${dest}\"\n\nif [ \"$CODE_SIGNING_REQUIRED\" == \"YES\" ]; then\n/usr/bin/codesign --force --sign ${EXPANDED_CODE_SIGN_IDENTITY} --preserve-metadata=identifier,entitlements \"${dest}/IBMCaseManagerSDK.framework\"\n/usr/bin/codesign --force --sign ${EXPANDED_CODE_SIGN_IDENTITY} --preserve-metadata=identifier,entitlements \"${dest}/IBMCaptureSDK.framework\"\n/usr/bin/codesign --force --sign ${EXPANDED_CODE_SIGN_IDENTITY} --preserve-metadata=identifier,entitlements \"${dest}/IBMCaptureUISDK.framework\"\nfi";
+			shellScript = "set -ex\n\ninstall_framework()\n{\n    FRAMEWORK_NAME=$1\n    \n    FRAMEWORK_SOURCE=\"${PROJECT_DIR}/Frameworks/${PLATFORM_NAME}/${FRAMEWORK_NAME}\"\n    FRAMEWORK_DESTINATION_PATH=\"${CONFIGURATION_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}\"\n    \n    if [ ! -d \"${FRAMEWORK_SOURCE}\" ]; then\n        FRAMEWORK_SOURCE=\"${PROJECT_DIR}/Frameworks/universal/${FRAMEWORK_NAME}\"\n    fi\n    \n    mkdir -p \"${CONFIGURATION_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}\"\n    \n    rsync -av --filter \"- CVS/\" --filter \"- .svn/\" --filter \"- .git/\" --filter \"- .hg/\" --filter \"- Headers/\" --filter \"- PrivateHeaders/\" --filter \"- Modules/\" \"${FRAMEWORK_SOURCE}\" \"${FRAMEWORK_DESTINATION_PATH}\"\n    \n    if [ \"$CODE_SIGNING_REQUIRED\" == \"YES\" ]; then\n    /usr/bin/codesign --force --sign ${EXPANDED_CODE_SIGN_IDENTITY} --preserve-metadata=identifier,entitlements \"${FRAMEWORK_DESTINATION_PATH}/${FRAMEWORK_NAME}\"\n    fi\n}\n\ninstall_framework \"IBMCaseManagerSDK.framework\"\ninstall_framework \"IBMCaptureSDK.framework\"\ninstall_framework \"IBMCaptureUISDK.framework\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -413,12 +423,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Frameworks/$(PLATFORM_NAME)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/Frameworks/$(PLATFORM_NAME)",
+					"$(PROJECT_DIR)/Frameworks/universal",
+				);
 				INFOPLIST_FILE = "IBM-CaseManagerCaptureSample-iOS/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
-					"-framework",
-					IBMCaseManagerSDK,
 					"-framework",
 					IBMCaptureUISDK,
 					"-framework",
@@ -438,12 +449,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Frameworks/$(PLATFORM_NAME)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/Frameworks/$(PLATFORM_NAME)",
+					"$(PROJECT_DIR)/Frameworks/universal",
+				);
 				INFOPLIST_FILE = "IBM-CaseManagerCaptureSample-iOS/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
-					"-framework",
-					IBMCaseManagerSDK,
 					"-framework",
 					IBMCaptureUISDK,
 					"-framework",

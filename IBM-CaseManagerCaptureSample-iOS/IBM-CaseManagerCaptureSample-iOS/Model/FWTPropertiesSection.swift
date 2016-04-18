@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import IBMCaseManagerSDK
 
 struct FWTPropertiesSection {
     var elements:[FWTPropertyElement]
@@ -18,17 +19,10 @@ struct FWTPropertiesSection {
 }
 
 extension ICMTaskPropertiesLayout {
-    func section() -> FWTPropertiesSection {
-        let elements:[FWTPropertyElement]
-        
-        if let properties = properties as? [ICMProperty] {
-            elements = properties.map {
-                FWTPropertyElement(property: $0)
-            }
-        } else {
-            elements = []
-        }
-        
-        return FWTPropertiesSection(elements: elements, title: title)
+  func section()->FWTPropertiesSection {
+    let elements : [FWTPropertyElement] = properties.map {
+      FWTPropertyElement(property : $0)
     }
+    return FWTPropertiesSection(elements : elements, title : title)
+  }
 }

@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import IBMCaseManagerSDK
 
 extension SequenceType where Generator.Element : ICMTask {
     func filterByRegex(pattern:String) -> [Generator.Element] {
